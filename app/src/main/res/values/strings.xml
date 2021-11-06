@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ifitness</string>
+    <string name="text_button_add_atividade">nova atividade</string>
+    <string name="general_details">0 atividade(s)-0 minutos-0 km-0 calorias</string>
+    <string name="empity_list_atividades">Nenhuma atividade cadastrada.</string>
+    <string name="title_tipos_atividade">Tipo de Atividade:</string>
+    <string name="option_caminhada">Caminhada</string>
+    <string name="option_ciclismo">Ciclismo</string>
+    <string name="option_corrida">Corrida</string>
+    <string name="option_natacao">Natação</string>
+    <string name="title_duracao_atividade">Duração(em minutos)</string>
+    <string name="title_distancia_atividade">Quilometragem(km)</string>
+    <string name="title_calorias_atividade">Calorias</string>
+    <string name="title_button_salvar">Salvar</string>
+</resources>

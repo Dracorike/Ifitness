@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="distance_textdetail_buttonadd">20dp</dimen>
+    <dimen name="distance_edittext">25dp</dimen>
+    <dimen name="button_distance_size">10dp</dimen>
+</resources>
