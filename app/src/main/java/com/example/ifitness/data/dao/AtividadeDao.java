@@ -1,4 +1,4 @@
-package com.example.ifitness.data;
+package com.example.ifitness.data.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

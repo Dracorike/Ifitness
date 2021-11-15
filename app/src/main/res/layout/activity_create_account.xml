@@ -24,10 +24,11 @@
         android:layout_margin="@dimen/distance_edittext"
         app:layout_constraintTop_toBottomOf="@id/text_title_create"/>
     <EditText
-        android:id="@+id/edit_user_create"
+        android:id="@+id/edit_email_create"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="User"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:layout_margin="@dimen/distance_edittext"
         app:layout_constraintTop_toBottomOf="@id/edit_nome_create"/>
     <EditText
@@ -35,8 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Senha"
+        android:inputType="textPassword"
         android:layout_margin="@dimen/distance_edittext"
-        app:layout_constraintTop_toBottomOf="@id/edit_user_create"/>
+        app:layout_constraintTop_toBottomOf="@id/edit_email_create"/>
     <Button
         android:id="@+id/button_createaccount"
         android:layout_width="match_parent"

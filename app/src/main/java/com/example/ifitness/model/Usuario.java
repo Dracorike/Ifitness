@@ -4,14 +4,16 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity
-public class Usuario {
+public class Usuario implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name = "nome")
     private String nome;
-    @ColumnInfo(name = "login")
-    private String login;
+    @ColumnInfo(name = "email")
+    private String email;
     @ColumnInfo(name = "password")
     private String password;
 
@@ -29,11 +31,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getLogin() {
-        return login;
+    public String getEmail() {
+        return email;
     }
-    public void setLogin(String login) {
-        this.login = login;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {

@@ -2,10 +2,7 @@ package com.example.ifitness.controller;
 
 import android.content.Context;
 
-import androidx.room.Room;
-
-import com.example.ifitness.data.AppDatabase;
-import com.example.ifitness.data.Repository;
+import com.example.ifitness.data.repository.RepositoryAtividade;
 import com.example.ifitness.model.Atividade;
 
 
@@ -15,10 +12,10 @@ import java.util.List;
 public class AtividadeController {
     private List<Atividade> atividades = new ArrayList<>();
     private Context context;
-    private Repository repository;
+    private RepositoryAtividade repository;
     public AtividadeController(Context context){
         this.context = context;
-        repository = new Repository(context);
+        repository = new RepositoryAtividade(context);
         atividades.addAll(repository.getAllAtividades());
     }
 
