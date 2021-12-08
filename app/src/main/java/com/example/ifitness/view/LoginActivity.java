@@ -28,13 +28,16 @@ public class LoginActivity extends AppCompatActivity {
             usuario.setEmail(bind.editEmailLogin.getText().toString());
             usuario.setPassword(bind.editPasswordLogin.getText().toString());
             if (controller.loginUser(usuario)){
-                switchActivity();
+                switchActivity(MainActivity.class);
             }
         });
+        bind.textClickaccountLogin.setOnClickListener(it ->
+                switchActivity(CreateAccountActivity.class));
+
     }
 
-    private void switchActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
+    private void switchActivity(Class classe){
+        Intent intent = new Intent(this, classe);
         startActivity(intent);
         finish();
     }

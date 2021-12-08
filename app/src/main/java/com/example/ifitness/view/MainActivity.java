@@ -63,12 +63,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bind.navControllerMain.setNavigationItemSelectedListener(this);
     }
 
-
-    private void switchActivity(Class classe){
-        Intent intent = new Intent(getApplicationContext(), classe);
-        startActivity(intent);
-    }
-
     @Override
     public void onBackPressed() {
         if(bind.drawerLayoutMain.isDrawerOpen(GravityCompat.START)){
@@ -81,11 +75,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.option_login:
-                switchActivity(LoginActivity.class);
+            case R.id.option_profile:
+                fragmentManager(new ProfileFragment());
                 break;
-            case R.id.option_create:
-                switchActivity(CreateAccountActivity.class);
+            case R.id.option_main:
+                fragmentManager(new MainFragment());
                 break;
         }
         bind.drawerLayoutMain.closeDrawer(GravityCompat.START);

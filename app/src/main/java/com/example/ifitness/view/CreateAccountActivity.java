@@ -2,6 +2,7 @@ package com.example.ifitness.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -27,7 +28,15 @@ public class CreateAccountActivity extends AppCompatActivity {
             usuario.setNome(bind.editNomeCreate.getText().toString());
             usuario.setEmail(bind.editEmailCreate.getText().toString());
             usuario.setPassword(bind.editPasswordCreate.getText().toString());
-            controller.createNewAccount(usuario);
+            if(controller.createNewAccount(usuario)){
+                switchActivity();
+            }
         });
+    }
+
+    private void switchActivity(){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
