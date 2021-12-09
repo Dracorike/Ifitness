@@ -30,6 +30,8 @@ public class CreateAccountActivity extends AppCompatActivity {
             usuario.setPassword(bind.editPasswordCreate.getText().toString());
             if(controller.createNewAccount(usuario)){
                 switchActivity();
+            }else {
+                Toast.makeText(this, "Algo deu errado", Toast.LENGTH_LONG).show();
             }
         });
     }
