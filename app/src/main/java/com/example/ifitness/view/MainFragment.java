@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ifitness.R;
 import com.example.ifitness.controller.AtividadeController;
 import com.example.ifitness.databinding.FragmentMainBinding;
 import com.example.ifitness.model.AtividadeAdapter;

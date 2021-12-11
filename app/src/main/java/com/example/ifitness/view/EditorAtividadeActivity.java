@@ -1,5 +1,6 @@
 package com.example.ifitness.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,12 +12,25 @@ import com.example.ifitness.R;
 import com.example.ifitness.controller.AtividadeController;
 import com.example.ifitness.databinding.ActivityEditorAtividadeBinding;
 import com.example.ifitness.model.Atividade;
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class EditorAtividadeActivity extends AppCompatActivity {
     private ActivityEditorAtividadeBinding bind;
     private int tipoAtividade;
     private AtividadeController controller;
     private static final String TAG_ERROR = "##Erro_Exception##";
+    private FirebaseFirestore store = FirebaseFirestore.getInstance();
+    private FirebaseUser auth = FirebaseAuth.getInstance().getCurrentUser();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +66,7 @@ public class EditorAtividadeActivity extends AppCompatActivity {
                         "Marque um tipo de atividade",
                         Toast.LENGTH_LONG).show();
             }catch (Exception exception){
-                Log.e(TAG_ERROR, exception.getMessage());
+                Log.e(TAG_ERROR, exception.toString());
             }
         });
     }
@@ -64,8 +78,11 @@ public class EditorAtividadeActivity extends AppCompatActivity {
         int calorias = Integer.parseInt(bind.editCalorias.getText().toString());
         Atividade atividade = controller.criarAtividade(tipoAtividade, duracao, km, calorias);
         controller.saveAtividade(atividade);
+        controller.addAtividadeToProfile(auth);
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
         finish();
     }
+
+
 }

@@ -16,6 +16,9 @@ public class Usuario implements Serializable {
     private String email;
     @ColumnInfo(name = "password")
     private String password;
+    @ColumnInfo(name = "atividades")
+    private long atividadesFeitas;
+    public Usuario(){}
 
     public int getId() {
         return id;
@@ -43,5 +46,12 @@ public class Usuario implements Serializable {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public long getAtividadesFeitas() {
+        return atividadesFeitas;
+    }
+    public void setAtividadesFeitas(long atividadesFeitas) {
+        this.atividadesFeitas = atividadesFeitas;
     }
 }

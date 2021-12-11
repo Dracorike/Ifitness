@@ -34,4 +34,38 @@
         app:layout_constraintStart_toEndOf="@id/text_nameuserbody_profile"
         app:layout_constraintTop_toTopOf="@id/text_nameuserbody_profile"
         app:layout_constraintBottom_toBottomOf="@id/text_nameuserbody_profile"/>
+    <TextView
+        android:id="@+id/text_emailuserbody_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/text_nameuserbody_profile"
+        app:layout_constraintTop_toBottomOf="@id/text_nameuserbody_profile"/>
+    <TextView
+        android:id="@+id/text_emailuser_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="emaildousuario@email.com"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/text_emailuserbody_profile"
+        app:layout_constraintTop_toTopOf="@id/text_emailuserbody_profile"
+        app:layout_constraintBottom_toBottomOf="@id/text_emailuserbody_profile"/>
+    <TextView
+        android:id="@+id/text_atividadesfeitasbody_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atividades feitas: "
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/text_emailuserbody_profile"
+        app:layout_constraintTop_toBottomOf="@id/text_emailuserbody_profile"/>
+    <TextView
+        android:id="@+id/text_atividadesfeitas_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/text_atividadesfeitasbody_profile"
+        app:layout_constraintTop_toTopOf="@id/text_atividadesfeitasbody_profile"
+        app:layout_constraintBottom_toBottomOf="@id/text_atividadesfeitasbody_profile"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
